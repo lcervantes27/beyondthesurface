@@ -1,0 +1,1118 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>      
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">      
+      <style type="text/css">
+          .bx-wrapper{
+            border: none;
+            background-color: background-color: #221f20;
+          }
+          .brand-logo>img {
+            height: 64px;
+            padding: 5px;
+            margin-left: 103px;
+          }
+          nav,body{
+            background-color: #221f20;
+          }
+          nav ul a,.navbutton{
+                font-size: 22px;
+                color: white;
+                margin: auto;
+          }
+          nav{
+            padding-top: 50px;
+          }
+          .navbutton{
+              border-style: none;
+              border-radius: .5em;              
+              margin-right: 50px;
+          }
+          @media only screen and (min-width: 993px){
+              .container {
+                width: 100%;
+                max-width: 100%;
+              }
+          }
+          nav,.container{
+            max-width: 1920px;
+            min-width: 1920px;
+            width: 1920px;
+            margin: 0 auto;
+          }
+          nav{
+            height: 160px !important;
+            max-height: 160px !important;
+          }
+          .container{
+            height: 802px !important; 
+            max-height: 802px !important;
+          }
+          .imgFoco{
+            width: 332px !important;
+            margin-left: -11px;
+            margin-top: 25px;
+          }
+          body{
+            height: 100vh;
+            overflow: hidden;
+          }
+          .beyondText{
+            color: white;
+            font-size: 13vh;
+            font-weight: 700;
+            text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #000,
+               0 3px 0 #000,
+               0 4px 0 #000,
+               0 5px 0 #000,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+            line-height: 1.3;
+            margin-bottom: 0;
+          }
+          .miniTextBeyond,.miniTextBeyondBlack{
+            color: white;
+            text-align: right;
+            padding-right: 4%;
+            font-weight: 700;
+            font-size: 27px;
+            line-height: 1.2;
+          }
+          .miniTextBeyondBlack{
+            color: black;
+            text-align: center;
+            font-weight: 400;
+            margin-top: 49px;
+            padding-left: 110px;
+            padding-right: 142px;
+          }
+          .navbutton{
+                background-color: #4285f4 !important;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                margin-top: -7.5px;
+          }
+          .bodyMainButton{
+                  background-color: #4285f4;
+                  padding-left: 50px;
+                  padding-right: 50px;
+                  padding-top: 25px;
+                  padding-bottom: 25px;
+                  margin-top: -7.5px;
+                  margin-left: 38%;
+                  margin-top: 75px;
+                  width: 232px;
+                  margin-left: 348px;
+                  margin-bottom: 103px;
+          }
+          .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{
+              top: 666px;
+              position: absolute;
+          }
+         .bx-wrapper {
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 0;
+          }
+          .bx-wrapper .bx-pager.bx-default-pager a{
+            width: 15px;
+            height: 15px;
+            border-radius: 10px;
+          }
+          .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus{
+            background: #4285f4;
+          }
+          .bx-wrapper .bx-controls-direction a{
+                width: 125px;
+                height: 125px;
+                top: 279px;
+                right: 37px;
+          }
+          .bx-wrapper .bx-prev{
+            background: none;
+          }
+          .bx-wrapper .bx-next{
+            background: none;
+          } 
+          .bx-wrapper .bx-n{
+            right: 2%;
+          } 
+          .bx-wrapper .bx-prev{
+            left: 2%
+          }    
+          .imgTablet{
+              margin-top: 160px;
+              margin-left: 61px;
+              width: 1051px;
+              max-width: 1100px !important;
+          }   
+          .titleImg{
+            width: 345px;
+            margin-left: 104px;
+            margin-top: 1px;
+            padding-top: 41px;
+          } 
+          .bx-wrapper .bx-pager.bx-default-pager a{
+            background: #D2D2D2;
+          }
+          .modal{
+            width: 1152px;
+            position: absolute;
+            height: 100%;
+            max-height: 100%;
+            top: 0% !important;
+            z-index: 9999;
+          }
+          .select_circle{
+            background-color: #ffcc29;
+            width: 2vh;
+            height: 2vh;
+            border-radius: 2em;
+            margin-left: 42%;
+            opacity: 0;
+          }
+          .contenidoLi{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 4px;
+          }
+          nav ul a:hover {
+          }
+          p::selection,img::selection,a::selection {
+            background: #ffcc29; 
+          }
+          p::-moz-selection {
+            background: #ffcc29; 
+          }
+          .modal .modal-content{
+            padding: 0;                                   
+          }
+          .modal{
+            overflow: hidden; 
+          }
+          .popContainer{
+            
+          }
+          .modal-content{
+            overflow-y: scroll;
+            width: 100%%;
+            margin-left: -4%;
+            padding-left: 4% !important;
+            padding-right: 4% !important;
+            /*opacity: .2;*/
+          }
+          .modal{
+            overflow: hidden;
+          }
+          .modal-overlay{
+            height: 100vh;
+            top: 0;
+            overflow: hidden;
+          }
+          .headPopImg{
+            width: 100%;
+            padding-bottom: 10%;
+            padding-top: 8%;
+          }
+          .modal-content{
+            overflow-y: scroll;
+            height: 100%;
+          }
+          .popParr{    
+            font-size: 22px;
+          }
+          .simpleList:not(.browser-default)>li{
+            list-style-type: circle;
+          }
+          #fadeImage {
+            position: relative;
+          }
+          .imageTransition {
+            position: absolute;
+            top: 14px;
+            width: 834px;
+            right: 0px;
+            max-width:850px !important;
+          }
+          nav.nav-extended{
+            height: 160px;
+            transition: background .5s ease;
+            -webkit-transition: background .5s ease;
+            -moz-transition: background .5s ease;
+            /*opacity: 0.5;*/
+          }
+          .container{
+            height: 900px;
+            /*opacity: 0.5;*/
+          }
+          .bx-wrapper{
+            background: none;
+          }
+          .bx-wrapper .bx-controls-direction a{
+            z-index: 50;
+          }
+          nav ul a:hover{
+            background-color: white;
+          }
+          .imgCuadroBlanco{
+              background: url("img/cuadro blanco.png");
+              background-repeat: no-repeat;
+              background-size: 100%110%;
+              background-position-x: -49px;
+              background-position-y: -34px;
+              width: 609px;
+              margin-left: 196px;
+              padding-top: 17px;
+              height: 717px;
+              margin-top: 21px;
+          }
+          .background-1920{
+            /*position: absolute;
+            background: url("img/guia8.jpg");
+            top: 0px;
+            left: 0px;
+            width: 1920px;
+            height: 1080px;
+            background-size: 100% 100%;*/
+          }
+          .elevador{
+            font-size: 25px;
+            font-weight: 400;
+            position: fixed;
+          }
+          .puntos_pop{
+            height: 122px;
+            margin-top: 40px;
+            margin-left: 20px;
+          }
+          .elevador_sel{
+            margin-left: 0px;
+          }
+          #modal6{
+            margin-top: 10%;
+          }
+          h4{
+            font-weight: bold;
+          }
+      </style>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <div class="background-1920"></div>
+      <nav class="nav-extended z-depth-0">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">
+            <img id="logoImg" class="responsive-img"  src="img/Beyond the surface blanco.png" onclick="VeSlide(0)">
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><div class="contenidoLi"><a id="navText_1" class="navTextCl" href="#" onclick="VeSlide(1)">Big Data</a><div id="navBullet_1" class="select_circle"></div></div></li>
+            <li><div class="contenidoLi"><a id="navText_2" class="navTextCl" href="#" onclick="VeSlide(2)">Virtual Reality</a><div id="navBullet_2" class="select_circle"></div></div></li>
+            <li><div class="contenidoLi"><a id="navText_3" class="navTextCl" href="#" onclick="VeSlide(3)">eCommerce</a><div id="navBullet_3" class="select_circle"></div></div></li>
+            <li><div class="contenidoLi"><a id="navText_4" class="navTextCl" href="#" onclick="VeSlide(4)">Software as a service</a><div id="navBullet_4" class="select_circle"></div></div></li>
+            <li><div class="contenidoLi" style="padding-right:83px;"><button onclick="VeSlide(5)" class="navbutton" style="margin:auto;">About</button></div></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="slider">
+          <div style="background-color: #221f20;">
+            <div class="row">
+              <div class="col s3">
+                <img src="img/Foco.png" class="imgFoco">
+              </div>
+              <div class="col s6">
+                <p class="beyondText" style="margin-top: 84px;font-family: Roboto Condensed, sans-serif;width: 1018px;margin-left: -65px;font-size: 144px;line-height: 173px;">BEYOND<br>THE SURFACE</p>
+                <p class="miniTextBeyond" style="font-family: Roboto Condensed, sans-serif;font-size: 27px;padding-right: 0px;margin-right: -7px;margin-top: -2px; margin-bottom: 56px;">exploring human-centered-desing<br>for digital interactions</p>
+                <li><button onclick="AbrirModal(1)" class="navbutton bodyMainButton" style="margin-top:48px;">The method</button></li>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="row">
+              <div class="col s6">
+                <img src="img/Tablet Big Data.png" class="imgTablet">
+              </div>
+              <div class="col s6">
+                <div class="imgCuadroBlanco">
+                  <img src="img/Big Data.png" class="titleImg">
+                  <p class="miniTextBeyondBlack" style="font-size:20px;">El mundo actual genera millones de datos los cuales se consumen tan r&aacute;pido como se producen, dejando incapaces a las herramientas tradicionales de procesarlos haciendo que informarse sea un proceso pesado, tedioso e incluso confuso que desemboca en el desaprovechamiento de la informaci&oacute;n.<br><br><br></p>
+                  <li><button onclick="AbrirModal(2)" style="margin-top: 47px;margin-left: 183px;width: 190px;padding-top: 19px;padding-bottom: 20px;" class="navbutton bodyMainButton">El Caso</button></li>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <div>
+            <div class="row">
+              <div class="col s6">
+                <img src="img/VR.png" class="imgTablet" style="margin-top: 93px;margin-left: 125px;width: 809px;">
+              </div>
+              <div class="col s6">
+                <div class="imgCuadroBlanco">
+                  <img src="img/Virtual Reality.png" class="titleImg">
+                  <p class="miniTextBeyondBlack" style="font-size:20px;margin-top: 29px;">Uno de los principales retos del dise&ntilde;o de nuevas herramientas digitales es la vinculaci&oacute;n con el contexto del usuario. Ya que este puede determinar el grado de adopci&oacute;n de las personas tanto en un nivel usabilidad c&oacute;mo qu&eacute; tan atractivo pueda resultar su uso para resolver cierto tipo de tareas.<br><br><br><br></p>
+                  <li><button onclick="AbrirModal(3)" class="navbutton bodyMainButton" style="margin-top: 43px;margin-left: 185px;width: 190px;padding-top: 19px;
+    padding-bottom: 20px;" >El Caso</button></li>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <div>
+            <div class="row">
+              <div class="col s6">
+                <img src="img/Celular ecommerce.png" class="imgTablet" style="width: 427px;margin-left: 335px;margin-top: 30px;">
+                
+              </div>
+              <div class="col s6">
+                <div class="imgCuadroBlanco">
+                  <img src="img/eCommerce.png" class="titleImg">
+                  <p class="miniTextBeyondBlack" style="font-size:20px;">La transici&oacute;n de un mundo an&aacute;logo a digital en el sector comercial evidenc&iacute;a necesidades no cubiertas por tiendas f&iacute;sicas, sobre todo en la experiencia de compra. Muchas veces suelen ser cansadas, insatisfactorias e incluso inaccesibles.<br><br><br><br><br><br></p>
+                  <li><button onclick="AbrirModal(4)" class="navbutton bodyMainButton" style="margin-top: -4px;margin-left: 184px;width: 190px;padding-top: 19px;padding-bottom: 20px;" >El Caso</button></li>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <div>
+            <div class="row">
+              <div class="col s6">
+                <img src="img/foto SAAS.png" class="imgTablet" style="margin-top: 52px;width: 777px;margin-left: 192px;">
+              </div>
+              <div class="col s6">
+                <div class="imgCuadroBlanco">
+                  <img src="img/Software as a service.png" class="titleImg">
+                  <p class="miniTextBeyondBlack" style="font-size:20px;">En el contexto actual con un estilo de vida activo, la adaptaci&oacute;n de la tecnolog&iacute;a digital a nuestras actividades diarias llega a convertir procesos largos y complicados en tareas eficientes y &aacute;giles de realizar. Un ejemplo de esto es la transformaci&oacute;n de servicios f&iacute;sicos a digitales, los cuales nos facilitan la realizaci&oacute;n de actividades simult&aacute;neas c&oacute;moda y eficientemente.</p>
+                  <li><button onclick="AbrirModal(5)" class="navbutton bodyMainButton" style="margin-top: 46px; margin-left: 185px;width: 190px;padding-top: 19px;padding-bottom: 20px;" >El Caso</button></li>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <div>
+            <div class="row">
+              <div class="col s7">
+                <img src="img/que es esto.png" class="imgTablet" style="margin-top: 33px;width: 406px;margin-left: 72px;">
+                <div class="row">
+                  <div class="col s1"></div>
+                  <div class="col s5">
+                    <p class="miniTextBeyondBlack" style="text-align: left;font-size: 27px;padding: 0px;margin-left: 0px;margin-top: 70px;font-size: 22px;padding-right: 23px;">M&aacute;s que una bit&aacute;cora o una recopilaci&oacute;n de trabajos, buscamos que Beyond the Surface logre se&ntilde;alar un rumbo que hemos estado intentando definir durante estos &uacute;ltimos a&ntilde;os. Un rumbo a&uacute;n estrecho dentro un entorno que suele valorar tanto el dise&ntilde;o de autor como la maquila superficial de composiciones est&eacute;ticas, fomentando que cada vez m&aacute;s estudiantes ejerzan su profesi&oacute;n sin tener una noci&oacute;n precisa sobre esta cultura de innovaci&oacute;n social y tecnol&oacute;gica que ha estado asom&aacute;ndose con m&aacute;s fuerza que nunca durante esta &uacute;ltima d&eacute;cada.</p>
+                    <p class="miniTextBeyondBlack" style="text-align: left;font-size: 27px;padding: 0px;margin-left: 0px;margin-top: 0px;font-size: 22px;padding-right: 23px;">Esperamos que este proyecto logre ser para alguien m&aacute;s ese empuj&oacute;n que estuvimos buscando durante nuestra formaci&oacute;n, exaltando la idea de que este mundo est&aacute;</p>
+                  </div>
+                  <div class="col s5">
+                    <p class="miniTextBeyondBlack" style="text-align: left;font-size: 27px;padding: 0px;margin-left: -8px;margin-top: 67px;font-size: 22px;padding-right: 23px;"> formado por sistemas complejos articulados entre s&iacute; y &eacute;stos pueden ser comprendidos a profundidad para generar resultados m&aacute;s c&aacute;lidos y emp&aacute;ticos dentro de alg&uacute;n proyecto que nos beneficie a todos.</p>
+                    <p class="miniTextBeyondBlack" style="text-align: left;font-size: 27px;padding: 0px;margin-left: -8px;margin-top: 43px;font-size: 22px;    padding-right: 23px;">Estamos convencido que este es un gran tiempo para ser dise&ntilde;ador. Y que gracias a estos esfuerzos colaborativos que comprendan el valor de ir m&aacute;s all&aacute; de la superficie, se podr&aacute;n desenredar las grandes problem&aacute;ticas de esta &eacute;poca, estableciendo sistemas de interacci&oacute;n entre personas y plataformas de comportamiento que estructuren un esfuerzo colaborativo en la sociedad y, al hacerlo, lograr que el mundo sea un mejor lugar en d&oacute;nde vivir.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col s5">
+                  <img class="imageTransition" id="imTran_1" src="img/pizarrron.png" alt="OpacAnimFrame1" style="display:block;">
+                  <img class="imageTransition" id="imTran_2" src="img/architecture.png" alt="OpacAnimFrame2" >
+                  <img class="imageTransition" id="imTran_3" src="img/bocetos.png" alt="OpacAnimFrame3" >
+                  <img class="imageTransition" id="imTran_4" src="img/workshop.png" alt="OpacAnimFrame1" >
+                  <img class="imageTransition" id="imTran_5"src="img/yomero.png" alt="OpacAnimFrame2" >
+                  <img class="imageTransition" id="imTran_6" src="img/Zitachan.png" alt="OpacAnimFrame3" >                
+              </div>   
+              <div class="col s1"></div>           
+            </div>
+          </div>
+        </div>  
+      </div>
+
+      <!-- MODAL1 -->
+              <div id="modal1" class="modal">
+                <div class="modal-content">
+                  <h4>Modal Header</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+      <!-- MODAL2 -->
+              <div id="modal2" class="modal">
+                <div class="modal-content">
+                  <div class="row" content="over">
+                    <div class="col s3" content="over"></div>
+                    <div class="col s6" content="over">
+                      <img src="img/bigDataPop.png" id="overview_pop1"class="headPopImg" content="over" style="width:120%;margin-left:-10%;">
+                    </div>
+                    <div class="col s3" content="over"></div>
+                  </div>                  
+                  <div class="row" content="over">
+                    <div class="col s3" content="over">
+                      <div class="elevador" content="over">
+                        <div class="row" content="over">
+                          <div class="col s3" content="over">
+                            <img class="puntos_pop" src="img/puntitos del elevador.png">
+                          </div>
+                          <div class="col s9" style="margin-left:-10px;" content="over">                          
+                            <ul>
+                              <li class="elevador_sel" id="elev_1_1" onclick="makeScroll('overview_pop1');resaltaElevador('elev_1_1');">Overview</li>
+                              <li class="elevador_sel" id="elev_1_2" onclick="makeScroll('inspiration_pop1');resaltaElevador('elev_1_2');">Inspiration</li>
+                              <li class="elevador_sel" id="elev_1_3" onclick="makeScroll('ideation_pop1');resaltaElevador('elev_1_3');">Ideation</li>
+                              <li class="elevador_sel" id="elev_1_4" onclick="makeScroll('implement_pop1');resaltaElevador('elev_1_4');">Implement</li>
+                            </ul>
+                          </div>
+                        </div>  
+                      </div>                     
+                    </div>
+                    <div class="col s6" content="over">
+                      <h4 style="    margin-top: -10%;" content="over">La superficie (overview):</h4>
+                      <p class="popParr">A mediados del 2016 fuimos contactados por una empresa llamada Int&eacute;lite, la cual se dedica al an&aacute;lisis de medios de comunicaci&oacute;n bajo pedido y hab&iacute;a decidido incursionar hacia el uso de tecnolog&iacute;as de inteligencia artificial para optimizar la obtenci&oacute;n de informaci&oacute;n en su base de datos masiva. Su principal problema a tratar era encontrar las formas de aprovechar el nuevo valor que este motor podr&iacute;a generar (adem&aacute;s de exaltar el valor de sus bases de datos hist&oacute;ricas) cuando lanzaran este producto al p&uacute;blico, ya que ser&iacute;a la primera vez que tratasen con un usuario desconocido, que no se encontrara dentro de sus mismas instalaciones.</p>
+                      <p class="popParr" content="over">Este proyecto fue especialmente importante para poder desarrollar lo que tanto hab&iacute;amos esperado pues, al contar con posibilidades tan abiertas, logramos crearnos un espacio amplio de experimentaci&oacute;n y sesiones en donde discutimos temas de innovaci&oacute;n social y tecnol&oacute;gica que hab&iacute;amos estado estudiando por separado. Implementamos al sistema de desarrollo teor&iacute;a de Antropolog&iacute;a social y cultural, Estrategia Prospectiva, Internet of Things, Plataformas de Comportamiento y Human Centered Design.</p>
+                      <br>
+                      <h4 content="over">Problematizar:</h4>
+                      <p class="popParr" content="over">
+                        El mundo actual genera millones de datos los cuales se consumen tan r&aacute;pido como se producen, dejando incapaces a las herramientas tradicionales de procesarlos haciendo que informarse sea un proceso pesado, tedioso e incluso confuso que desemboca en el desaprovechamiento de la informaci&oacute;n.
+                      </p>
+                      <ul class="simpleList" content="over">
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;C&oacute;mo podr&iacute;amos hacer llegar a la gente la mayor informaci&oacute;n posible sin saturarlos?</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;Cu&aacute;l ser&iacute;a la reacci&oacute;n de las personas ante una forma de consumo de informaci&oacute;n?</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;Qu&eacute; tipo de valor se genera para ellos?</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;Cu&aacute;l ser&iacute;a la mejor forma de llevar a cabo la transici&oacute;n a un nuevo medio de consumo?</p></li>
+                      </ul>
+                    </div>
+                    <div class="col s3" content="over">
+                    </div>
+                  </div>
+                  <div class="row" content="insp">
+                    <div class="col s3" content="insp"></div>
+                    <div class="col s6" content="insp">
+                       <img src="img/inspiration hear.png" id="inspiration_pop1" class="headPopImg" style="padding-top: 0;padding-bottom: 0;width:120%;margin-left:-10%;" content="insp" >
+                    </div>
+                    <div class="col s3" content="insp"></div>
+                  </div>                 
+                  <div class="row" content="insp">
+                    <div class="col s3" content="insp">
+                    </div>
+                    <div class="col s6" content="insp">
+                      <h4 style="margin-top: -10%;" content="insp">Research:</h4>
+                      <p class="popParr">A pesar de contar con informaci&oacute;n de los clientes decidimos dedicar unos d&iacute;as a entender a profundidad las necesidades de las personas para obtener informaci&oacute;n de los h&aacute;bitos, necesidades y dificultades de las personas al momento de realizar compras online y en tienda f&iacute;sica. . Esta decisi&oacute;n la tomamos a partir de revisar informaci&oacute;n del cliente y darnos cuenta de que sus datos cuantitativos no iban a ser suficientes para lograr los alcances que esperaban del proyecto.</p>    
+
+                      <p class="popParr" content="insp">En esta etapa realizamos entrevistas a profundidad para entender cu&aacute;les son las razones por las que las personas prefieren realizar comprar en puntos de venta f&iacute;sicos y cu&aacute;les son las que los hacen inclinarse por tiendas online; qu&eacute; tipo de plataformas  prefieren para realizar compras digitales; cu&aacute;les son las fortalezas, oportunidades, debilidades y amenazas del medio digital y cu&aacute;les de un medio f&iacute;sico;  cu&aacute;les son los inconvenientes al momento de comprar zapatos; cu&aacute;les son las razones para que la gente compre zapatos; qu&eacute; factores motivan a elegir un modelo y no otro; y si acostumbran a obsequiar zapatos, si han tenido inconvenientes y cu&aacute;les han sido.</p>
+
+                      <p class="popParr" content="insp">Tambi&eacute;n realizamos seguimiento mediante shadowing para entender c&oacute;mo las personas comprar zapatos en tiendas f&iacute;sicas, los factores a considerar al momento de ver un modelo, que determina el inter&eacute;s en ver un zapato y cu&aacute;les son los siguientes pasos hasta la decisi&oacute;n de comprar o no comprar.</p>
+                      <br>
+                      <img src="img/collage 1.png" class="headPopImg" style="padding-top: 0;" onclick="PopUpImg('img/collage 1.png')" content="insp">
+                      <h4>Hallazgos e Insights:</h4>
+                      <ul class="simpleList" content="insp">
+                        <li><p class="popParr" style="font-weight: 900;">Hay un n&uacute;mero considerable de personas que prefieren comprar en tiendas f&iacute;sicas que digitales debido a que el desconocimiento del proceso les genera desconfianza porque no saben a d&oacute;nde ir&aacute;n sus datos personales o les parece algo complicado de realizar, por lo que prefieren comprar con el proceso que ya conocen. </p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Lo que m&aacute;s gusta de comprar en tiendas f&iacute;sicas es la posibilidad de observar los productos a detalle y la compra en el momento de los art&iacute;culos.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Una de las principales debilidades de la compra f&iacute;sica es que el stock puede llegar a ser muy reducido, lo cual lleva a pensar al cliente que podr&iacute;an aprovechar mejor su tiempo en lugar de buscar un producto de tienda en tienda.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">El horario de tiendas f&iacute;sicas es un inconveniente para los clientes, ya que sus actividades diarias no les permiten alcanzar a ir de compras o tienen que esperar a su d&iacute;a de descanso.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">En cambio las compras en tiendas digitales brindan la oportunidad de realizar compras desde la comodidad del hogar, con un amplio stock de productos, sin depender del personal de la tienda, dando una sensaci&oacute;n de mejor inversi&oacute;n del tiempo.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Sin embargo, las compras digitales tienen problem&aacute;ticas como la espera en el tiempo de llegada del producto, problemas con env&iacute;os o devoluciones as&iacute; como no poder visualizar el producto como se ve en vivo .</p></li>
+                      </ul>
+                    </div>
+                    <div class="col s3" content="insp">
+                    </div>
+                  </div>
+                  <div class="row" content="idea">
+                    <div class="col s3" content="idea"></div>
+                    <div class="col s6" content="idea">
+                      <img src="img/ideation dream.png" id="ideation_pop1" class="headPopImg" style="padding-top: 0;padding-bottom: 0;width:120%;margin-left:-10%;" content="idea" >
+                    </div>
+                    <div class="col s3" content="idea"></div>
+                  </div>                  
+                  <div class="row" content="idea">
+                    <div class="col s3">
+                    </div>
+                    <div class="col s6" content="idea">
+                      <p class="popParr" content="idea">Con este acercamiento que tuvimos hacia las personas establecimos una base de valores  que nos servir&iacute;an de ruta a seguir para construir la plataforma que deb&iacute;amos ofrecer a los usuarios y a la empresa. Por un lado sintetizamos el valor que los usuarios podr&iacute;an obtener de la plataforma en el concepto de informaci&oacute;n accesible, asequible y veraz. Y el valor que pod&iacute;amos ofrecer a la empresa y a sus posibles clientes, lo concentramos en el concepto de informaci&oacute;n es poder. </p>
+                      <p class="popParr" content="idea">Una vez establecidas y sintetizadas las necesidades en conceptos, traducimos ese valor intangible en requerimientos espec&iacute;ficos de dise&ntilde;o para construir el valor tangible. Un ejemplo de estos es tomar como requerimiento la legibilidad cognitiva para tener en mente la construcci&oacute;n de algo para que los usuarios entiendan los datos que est&aacute;n leyendo seg&uacute;n les sea m&aacute;s c&oacute;modo. Algunos otros requerimientos que establecimos fueron la confianza, comodidad, productiva, entre muchos otros. </p>
+                      <p class="popParr" content="idea">Uno de los puntos importantes a trabajar fue la representaci&oacute;n de informaci&oacute;n, para la cual retomamos parte del an&aacute;lisis de consumo actual en medios, que tuvimos al comienzo del proyecto. Para definir la presentaci&oacute;n en gr&aacute;ficas de la informaci&oacute;n categorizamos en cuatro grupos la informaci&oacute;n que los usuarios podr&iacute;an consultar:</p>
+                      <br>
+                      <h4>Problematizar:</h4>
+                      <p class="popParr" content="idea">
+                        El mundo actual genera millones de datos los cuales se consumen tan r&aacute;pido como se producen, dejando incapaces a las herramientas tradicionales de procesarlos haciendo que informarse sea un proceso pesado, tedioso e incluso confuso que desemboca en el desaprovechamiento de la informaci&oacute;n.
+                      </p>
+                      <ul content="idea">
+                        <li><p class="popParr" style="font-weight: 900;">I. Partes de un total</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">II. Distribuciones</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">III. Comparaciones</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">IV. Tendencias</p></li>
+                      </ul>
+                      <p class="popParr" content="idea">
+                        Y como ejemplos para representar el funcionamiento de la informaci&oacute;n planteamos cuatro casos, uno por cada una de las cuatro situaciones de b&uacute;squeda:
+                      </p>
+                      <ul content="idea">
+                        <li><p class="popParr" style="font-weight: 900;">I. Servicios</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">II. Usuarios</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">III. Actividades</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">IV. Acontecimientos</p></li>
+                      </ul>
+                      <p class="popParr" content="idea">
+                        En las sesiones de ideaci&oacute;n concluimos que deber&iacute;amos tener tres premisas base para la plataforma: 
+                      </p>
+                      <ul class="simpleList" content="idea">
+                        <li><p class="popParr" style="font-weight: 900;">Manejo intuitivo de la plataforma. Arrastrar un m&oacute;dulo para ordenar, compartir y correlacionar.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Gesti&oacute;n de la informaci&oacute;n. Secciones y jerarqu&iacute;as personalizables, colaboraci&oacute;n en tiempo real de la informaci&oacute;n, ajustes de la plataforma seg&uacute;n necesidades del usuario.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Sistemas de comunicaci&oacute;n org&aacute;nicos. Visualizar la informaci&oacute;n de acuerdo a necesidades.</p></li>
+                      </ul>
+                      <img src="img/funciones 1.png" class="headPopImg" style="padding: 0;" onclick="PopUpImg('img/funciones 1.png')" content="idea">
+                      <p class="popParr">Adem&aacute;s llegamos a soluciones como: agregar diferentes tipos de gr&aacute;ficas para la visualizaci&oacute;n de datos para que el usuario pueda elegir el tipo de gr&aacute;fica que resolviera sus necesidades; la posibilidad de agregar diferentes perfiles para trabajar en conjunto en tiempo real de forma colaborativa as&iacute; como un chat de trabajo y notificaciones de la actividad de cada miembro; o un sistema ordenado y estructurado y a la vez flexible con tableros de visualizaci&oacute;n de datos con tama&ntilde;os establecidos y proporcionales, filtros que se pueden ordenar seg&uacute;n su uso y posibilidad de generar p&aacute;ginas por tablero, etc.</p>
+                    </div>
+                    <div class="col s3" content="idea">
+                    </div>
+                  </div>
+                  <div class="row" content="imp">
+                    <div class="col s3" content="imp"></div>
+                    <div class="col s6" content="imp">
+                      <img src="img/implement create.png" id="implement_pop1" class="headPopImg" style="padding-top: 0;padding-bottom: 0;width:120%;margin-left:-10%;"content="imp" >
+                    </div>
+                    <div class="col s3" content="imp"></div>
+                  </div>                  
+                  <div class="row" content="imp">
+                    <div class="col s3" content="imp">
+                    </div>
+                    <div class="col s6" content="imp">
+                      <p class="popParr" content="imp">Con estos tres pilares tuvimos sesiones de dise&ntilde;o colaborativo, en la que cada uno realizaba su propuesta para posteriormente reunirnos y en conjunto presentar y discutir sobre los aciertos a considerar y elementos a refinar para aprovechar al m&aacute;ximo el aporte de cada miembro del equipo. </p>
+                      <img src="img/collage 2.png" class="headPopImg" style="padding: 0;" onclick="PopUpImg('img/collage 2.png')" content="imp">
+                      <p class="popParr" content="imp">El proceso de dise&ntilde;o gr&aacute;fico estuvo conformado de varios ciclos, en los que se revisaban los resultados de la propuesta y al final de cada uno se revisan los resultados para optimizarlos y mejorarlos. </p>                    
+                    </div>
+                    <div class="col s3" content="imp">
+                    </div>
+                  </div>
+                  <div class="row" content="imp">
+                    <div class="col s3" content="imp"></div>
+                    <div class="col s6" content="imp">
+                      <img src="img/diagrama.png" class="headPopImg" style="padding-top: 0;" onclick="PopUpImg('img/diagrama.png')" content="imp">
+                      <div class="video-container" content="imp">
+                        <iframe  class="headPopImg" style="padding-bottom: 0;" width="560" height="315" src="https://www.youtube.com/embed/8nZPHSVAvIw" frameborder="0" allowfullscreen content="imp"></iframe>
+                      </div>
+                      <div class="video-container">
+                        <iframe class="headPopImg" style="padding-bottom: 0;" width="560" height="315" src="https://www.youtube.com/embed/25uFd0S6h7s" frameborder="0" allowfullscreen ></iframe>
+                      </div>
+                      <div class="video-container" content="imp">
+                        <iframe class="headPopImg" style="padding-bottom: 0;" width="560" height="315" src="https://www.youtube.com/embed/V2qyIRWpOeE" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                      <div class="video-container" content="imp">
+                        <iframe class="headPopImg" style="padding-bottom: 0;" width="560" height="315" src="https://www.youtube.com/embed/GZhmn4zbbXk" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="col s3" content="imp"></div>
+                  </div>                  
+                  <div class="row" content="imp">
+                    <div class="col s3"></div>
+                    <div class="col s6">
+                      <img src="img/12.png" class="headPopImg" onclick="PopUpImg('img/12.png')" content="imp">
+                      <img src="img/32.png" class="headPopImg" onclick="PopUpImg('img/32.png')" content="imp">
+                      <img src="img/51.png" class="headPopImg" onclick="PopUpImg('img/51.png')" content="imp">
+                      <img src="img/53.png" class="headPopImg" onclick="PopUpImg('img/53.png')" content="imp">
+                      <img src="img/72.png" class="headPopImg" onclick="PopUpImg('img/72.png')" content="imp">                    
+                      <img src="img/22.png" class="headPopImg" onclick="PopUpImg('img/22.png')" content="imp">
+                      <img src="img/42.png" class="headPopImg" onclick="PopUpImg('img/42.png')"content="imp">
+                      <img src="img/52.png" class="headPopImg" onclick="PopUpImg('img/52.png')" content="imp">
+                      <img src="img/62.png" class="headPopImg" onclick="PopUpImg('img/62.png')" content="imp">
+                      <img src="img/82.png" class="headPopImg" onclick="PopUpImg('img/82.png')" content="imp">
+                    </div>
+                    <div class="col s3" content="imp"></div>
+                  </div>
+                  <div class="modal-footer">
+                  </div>
+                </div>
+              </div>
+      <!-- MODAL3 -->
+              <div id="modal3" class="modal">
+                <div class="modal-content">
+                  <div class="row" content="over2">
+                    <div class="col s3" content="over2"></div>
+                    <div class="col s6" content="over2">
+                      <img src="img/virtual realityhead.png" class="headPopImg" id="overview_pop2" content="over2" style="width:120%;margin-left:-10%;">
+                    </div>
+                    <div class="col s3"></div>
+                  </div>                  
+                  <div class="row" content="over2">
+                    <div class="col s3" content="over2">
+                      <div class="elevador">
+                        <div class="row">
+                          <div class="col s3" content="over2">
+                            <img class="puntos_pop" src="img/puntitos del elevador.png" content="over2">
+                          </div>
+                          <div class="col s9" style="margin-left:-10px;" content="over2">                          
+                            <ul>
+                              <li class="elevador_sel" id="elev_2_1" onclick="makeScroll('overview_pop2');resaltaElevador('elev_2_1');">Overview</li>
+                              <li class="elevador_sel" id="elev_2_2" onclick="makeScroll('inspiration_pop2');resaltaElevador('elev_2_2');">Inspiration</li>
+                              <li class="elevador_sel" id="elev_2_3" onclick="makeScroll('ideation_pop2');resaltaElevador('elev_2_3');">Ideation</li>
+                              <li class="elevador_sel" id="elev_2_4" onclick="makeScroll('implement_pop2');resaltaElevador('elev_2_4');">Implement</li>
+                            </ul>
+                          </div>
+                        </div>  
+                      </div> 
+                    </div>
+                    <div class="col s6" content="over2">
+                      <h4 style="margin-top: -10%;" content="over2">La superficie (overview):</h4>
+                      <p class="popParr" content="over2">Los servicios de Realidad Virtual son uno de los fuertes de Virtualware, especialmente su uso para capacitaci&oacute;n de trabajadores en diversas industrias. A principios del 2016, al formar parte del equipo, entramos de lleno a un proyecto experimental que combinar&iacute;a esta tecnolog&iacute;a con el streaming. Lo llamamos “Nmerso” y decidimos que el aporte m&aacute;s provechoso de nuestra parte ser&iacute;a establecer est&aacute;ndares de usabilidad en GUI para los visores de VR.</p>
+
+                      <p class="popParr" content="over2">Logramos estructurar la estrategia digital para poder arrancar el proyecto desde una perspectiva centrada en el humano bas&aacute;ndonos en los resultados de nuestro proceso.</p>
+                      <br>
+                      <h4 content="over2">Problematizar:</h4>
+                      <p class="popParr" content="over2">
+                        En una &eacute;poca en donde es cada vez m&aacute;s frecuente la generaci&oacute;n de herramientas digitales y el dise&ntilde;o de nuevas propuestas de entretenimiento, trabajo, comunicaci&oacute;n, etc., los dise&ntilde;adores deben buscar la manera de ofrecer a los usuarios estas nuevas propuestas de manera que se vinculen con su contexto. La complejidad de estos retos est&aacute;n directamente relacionados con qu&eacute; tan acostumbrada est&aacute; la gente al uso de una determinada tecnolog&iacute;a. Siendo el caso de una plataforma digital distinta a lo que actualmente se usa, es necesario establecer ciertos est&aacute;ndares que le permitan a las personas usar y aprovechar est&aacute; nueva propuesta de la manera m&aacute;s c&oacute;moda y fluida posible.
+                      </p>
+                      <ul class="simpleList" content="over2">
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;C&oacute;mo podr&iacute;amos crear una experiencia m&aacute;s placentera ante una pantalla directamente frente a nuestros ojos?</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;C&oacute;mo reaccionar&iacute;a la gente de diferentes perfiles culturales ante el contenido que se ha estado creando?</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;Cu&aacute;l es el valor que con esta tecnolog&iacute;a se puede generar para ellos?</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;C&oacute;mo se puede vincular una nueva tecnolog&iacute;a al contexto de los usuarios?</p></li>
+                      </ul>
+                    </div>
+                    <div class="col s3">
+                    </div>
+                  </div>
+                  <div class="row" content="insp2">
+                    <div class="col s3" content="insp2"></div>
+                    <div class="col s6" content="insp2">
+                      <img src="img/blue inspiration hear.png" class="headPopImg" style="padding-top: 0;padding-bottom: 0;width:120%;margin-left:-10%;" id="inspiration_pop2" content="insp2">
+                    </div>
+                    <div class="col s3" content="insp2"></div>
+                  </div>                  
+                  <div class="row" content="insp2">
+                    <div class="col s3" content="insp2">
+                    </div>
+                    <div class="col s6" content="insp2">
+                      <h4 content="insp2">Research:</h4>
+                      <p class="popParr" content="insp2">El comienzo de este proyecto, represent&oacute; un gran reto para el equipo, ya que ten&iacute;amos muy en mente que al ser una nueva tecnolog&iacute;a nos esperaba un arduo trabajo al momento de dirigir los beneficios de la plataforma para que lograran vincularse al contexto de las personas. Y no s&oacute;lo el contexto social, si no tambi&eacute;n el cultural, tecnol&oacute;gico y de mercado.</p>    
+
+                      <p class="popParr" content="insp2">Realizamos varias investigaciones, para lo cual nos valimos de distintas herramientas como el Test de Lüsher desde la psicolog&iacute;a, Entrevistas a profundidad, Test de usabilidad, etc.</p>
+
+                      <p class="popParr" content="insp2">Antes de pasar a la siguiente etapa, concentramos los datos de la informaci&oacute;n tres tipos de usuarios para tomar como base en las decisiones siguientes de todos los departamentos involucrados en el equipo (marketing, graphic design, ux, etc)</p>
+                      <br>
+                      <img src="img/collage 12.png" class="headPopImg" style="padding-top: 0;" onclick="PopUpImg('img/collage 12.png')" content="insp2">
+                      <h4 content="insp2">Hallazgos e Insights:</h4>
+                      <ul class="simpleList" content="insp2">
+                        <li><p class="popParr" style="font-weight: 900;">El hardware necesario para el uso de VR actualmente tiene varias limitantes como la duraci&oacute;n de la bater&iacute;a, potencia del celular que afectan al calentamiento y rendimiento del mismo.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;"> La decisi&oacute;n de consumo de las personas, tiende a basarse en la imagen que quieren construir entorno a su identidad, lo cual es un factor determinante del tipo de contenido que comparten en redes.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Tener una pantalla frente a los ojos suele ser cansado para los usuarios, problema que reduce el tiempo de uso del visor.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">El uso de aplicaciones tiende a basarse en las actividades a las que la gente realiza, sobre todo pasatiempo y trabajo.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Las plataformas de VR requieren elementos espec&iacute;ficos que se adapten a las necesidades fisiol&oacute;gicas de las personas.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Es mayor el n&uacute;mero de usuarios interesados en conocer nuevas tecnolog&iacute;as, la gente menos interesada son las personas que casi no usan la tecnolog&iacute;a digital y personas mayores en donde el convencionalismo es mayor.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Hay un inter&eacute;s en los j&oacute;venes por tener acceso a lugares existentes como Jap&oacute;n, Alemania, pa&iacute;ses a los que se es factible viajar m&aacute;s que inter&eacute;s en poder tener acceso a “vivir” una experiencia de mundos fant&aacute;sticos como el mundo de Harry.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Uno de los pasatiempos de las personas es ver pel&iacute;culas o series, no s&oacute;lo fines de semana, tambi&eacute;n buscan momentos entre semana para ese tipo de entretenimiento</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">El uso de una aplicaci&oacute;n de inmersi&oacute;n con un visor de VR no es claro para muchos usuarios, por lo que es necesario optimizar procesos como el armado del cardboard, la selecci&oacute;n de videos y las instrucciones para su uso</p></li>
+                        <img src="img/imagen 1.png" class="headPopImg" style="padding: 0;" onclick="PopUpImg('img/imagen 1.png')" content="insp2">
+                      </ul>
+                    </div>
+                    <div class="col s3" content="insp2">
+                    </div>
+                  </div>
+                  <div class="row" content="idea2">
+                    <div class="col s3" content="idea2"></div>
+                    <div class="col s6" content="idea2">
+                      <img src="img/blue ideation dream.png" class="headPopImg" style="padding-top: 0;padding-bottom: 0;width:120%;margin-left:-10%;" id="ideation_pop2" content="idea2">
+                    </div>
+                    <div class="col s3" content="idea2"></div>
+                  </div>                  
+                  <div class="row" content="idea2">
+                    <div class="col s3" content="idea2">
+                    </div>
+                    <div class="col s6" content="idea2">
+                      <p class="popParr" content="idea2">Con los datos obtenidos nos dedicamos a dise&ntilde;ar una interfaz para el visor de VR con la finalidad de marcar rumbo a seguir para futuros proyectos.<br>As&iacute; cada departamento se dedic&oacute; a emplear la informaci&oacute;n recabada para realizar propuestas desde su &aacute;rea, por ejemplo el equipo de visualizaci&oacute;n y dise&ntilde;o gr&aacute;fico se ocup&oacute; de resolver una p&aacute;gina de Internet promocional, por ejemplo.</p>
+                      <img src="img/collage 3.png" class="headPopImg" style="padding: 0;" onclick="PopUpImg('img/collage 3.png')" content="idea2">
+                      <img src="img/collage 22.png" class="headPopImg" style="padding: 0;" onclick="PopUpImg('img/collage 22.png')" content="idea2">  
+                    </div>
+                    <div class="col s3" content="idea2">
+                    </div>
+                  </div>
+                  <div class="row" content="imp2">
+                    <div class="col s3" content="imp2"></div>
+                    <div class="col s6" content="imp2">
+                      <img src="img/blue implement create.png" class="headPopImg" style="padding-top: 0;padding-bottom: 0;width:120%;margin-left:-10%;" id="implement_pop2" content="imp2">
+                    </div>
+                    <div class="col s3" content="imp2"></div>
+                  </div>                   
+                  <div class="row" content="imp2">
+                    <div class="col s3" content="imp2">
+                    </div>
+                    <div class="col s6" content="imp2">
+                      <p class="popParr" content="imp2">Actualmente el proyecto original se ha ido transformado tomando como base el trabajo que aqu&iacute; presento. Este proyecto a servido para m&uacute;ltiples proyectos que se han presentado en eventos y ferias de la secretar&iacute;a de turismo.<br>E incluso el mismo NMERSO, se ha llevado a diferentes presentaciones y ferias, siendo la m&aacute;s actual:</p>
+                      <img src="img/blue collage 4.png" class="headPopImg" style="padding-top: 0;padding-bottom: 0;" onclick="PopUpImg('img/blue collage 4.png')" content="imp2">
+                    </div>                      
+                    <div class="col s3" content="imp2">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+      <!-- MODAL4 -->
+              <div id="modal4" class="modal">
+                <div class="modal-content">
+                  <div class="row" content="over3">
+                    <div class="col s3" content="over3"></div>
+                    <div class="col s6" content="over3">
+                      <img src="img/ecommercehead.png" class="headPopImg" id="overview_pop3" content="over3" style="width:120%;margin-left:-10%;">
+                    </div>
+                    <div class="col s3" content="over3"></div>
+                  </div>                   
+                  <div class="row" content="over3">
+                    <div class="col s3" content="over3">
+                      <div class="elevador" content="over3">
+                        <div class="row" content="over3">
+                          <div class="col s3" content="over3">
+                            <img class="puntos_pop" src="img/puntitos del elevador.png" content="over3">
+                          </div>
+                          <div class="col s9" style="margin-left:-10px;" content="over3">                          
+                            <ul>
+                              <li class="elevador_sel" id="elev_3_1" onclick="makeScroll('overview_pop3');resaltaElevador('elev_3_1');">Overview</li>
+                              <li class="elevador_sel" id="elev_3_2" onclick="makeScroll('inspiration_pop3');resaltaElevador('elev_3_2');">Inspiration</li>
+                              <li class="elevador_sel" id="elev_3_3" onclick="makeScroll('ideation_pop3');resaltaElevador('elev_3_3');">Ideation</li>
+                              <li class="elevador_sel" id="elev_3_4" onclick="makeScroll('implement_pop3');resaltaElevador('elev_3_4');">Implement</li>
+                            </ul>
+                          </div>
+                        </div>  
+                      </div> 
+                    </div>
+                    <div class="col s6" content="over3">
+                      <h4 style="margin-top: -10%;">La superficie (overview):</h4>
+                      <p class="popParr">Uno de los proyectos que desarrollamos a comienzos del 2017 fue un sitio de ecommerce para calzado cuyo trabajo solicitaron un par de empresarios quienes ten&iacute;a zapater&iacute;as f&iacute;sicas de modelos propios de calzado y, en vista de las nuevas oportunidades que el desarrollo tecnol&oacute;gico y la generaci&oacute;n de nuevas herramientas digitales crearon, decidieron fundar una empresa de distribuci&oacute;n de zapatos de diferentes marcas. Uno de los problemas que pensaban resolver fue encontrar la talla perfecta mediante uso de realidad aumentada, sin embargo despu&eacute;s de sesiones de discusi&oacute;n con el equipo concluimos que no era una opci&oacute;n viable a corto plazo. Las recomendaciones que hicimos fueron dejar la realidad aumentada &uacute;nicamente como medio para visualizar c&oacute;mo lucir&iacute;a el zapato puesto y tratar de resolver las problem&aacute;ticas actuales de comprar en puntos de venta f&iacute;sicos as&iacute; como tomar las oportunidades de mejora de las compras en tienda digital y en espec&iacute;fico de la compra de zapatos. </p>
+                      <br>
+                      <h4 content="over3">Problematizar:</h4>
+                      <p class="popParr" content="over3">
+                        La nuevas necesidades que la transici&oacute;n de un mundo an&aacute;logo a un mundo digital ha tra&iacute;do se ven reflejadas en el &aacute;mbito comercial cuando un espacio f&iacute;sico no puede responder a estas problem&aacute;ticas haciendo de la experiencia de compra un momento cansado, insatisfactorio y muchas veces inaccesible para las personas por los est&aacute;ndares que las tiendas f&iacute;sicas requieren, como horarios, espacio y personal.  
+                      </p>
+                      <ul class="simpleList" content="over3">
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;Cu&aacute;les podr&iacute;an ser los par&aacute;metros para pasar por esta transici&oacute;n digital?</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;Cu&aacute;l ser&iacute;a la respuesta de las personas frente a compras en l&iacute;nea?</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;Qu&eacute; tipo de valor se genera para ellos?</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">&iquest;Cu&aacute;les son las expectativas en las compras de zapatos por medio de una plataforma digital?</p></li>
+                      </ul>
+                    </div>
+                    <div class="col s3" content="over3">
+                    </div>
+                  </div>
+                  <div class="row" content="insp3">
+                    <div class="col s3" content="insp3"></div>
+                    <div class="col s6" content="insp3">
+                      <img src="img/inspiration hear.png" class="headPopImg" style="padding-top: 0;padding-bottom: 0;width:120%;margin-left:-10%;" id="inspiration_pop3" content="insp3">
+                    </div>
+                    <div class="col s3" content="insp3"></div>
+                  </div>                  
+                  <div class="row" content="insp3">
+                    <div class="col s3" content="insp3">
+                    </div>
+                    <div class="col s6" content="insp3">
+                      <h4 content="insp3">Research:</h4>
+                      <p class="popParr" content="insp3">A pesar de contar con informaci&oacute;n de los clientes decidimos dedicar unos d&iacute;as a entender a profundidad las necesidades de las personas para obtener informaci&oacute;n de los h&aacute;bitos, necesidades y dificultades de las personas al momento de realizar compras online y en tienda f&iacute;sica. . Esta decisi&oacute;n la tomamos a partir de revisar informaci&oacute;n del cliente y darnos cuenta de que sus datos cuantitativos no iban a ser suficientes para lograr los alcances que esperaban del proyecto. </p>    
+
+                      <p class="popParr" content="insp3">En esta etapa realizamos entrevistas a profundidad para entender cu&aacute;les son las razones por las que las personas prefieren realizar comprar en puntos de venta f&iacute;sicos y cu&aacute;les son las que los hacen inclinarse por tiendas online; qu&eacute; tipo de plataformas  prefieren para realizar compras digitales; cu&aacute;les son las fortalezas, oportunidades, debilidades y amenazas del medio digital y cu&aacute;les de un medio f&iacute;sico;  cu&aacute;les son los inconvenientes al momento de comprar zapatos; cu&aacute;les son las razones para que la gente compre zapatos; qu&eacute; factores motivan a elegir un modelo y no otro; y si acostumbran a obsequiar zapatos, si han tenido inconvenientes y cu&aacute;les han sido.</p>
+
+                      <p class="popParr" content="insp3">Tambi&eacute;n realizamos seguimiento mediante shadowing para entender c&oacute;mo las personas comprar zapatos en tiendas f&iacute;sicas, los factores a considerar al momento de ver un modelo, que determina el inter&eacute;s en ver un zapato y cu&aacute;les son los siguientes pasos hasta la decisi&oacute;n de comprar o no comprar. </p>
+                      <br>
+                      <img src="img/13.png" class="headPopImg" style="padding: 0;" onclick="PopUpImg('img/13.png')" content="insp3">
+                      <h4>Hallazgos e Insights:</h4>
+                      <ul class="simpleList" content="insp3">
+                        <li><p class="popParr" style="font-weight: 900;">Hay un n&uacute;mero considerable de personas que prefieren comprar en tiendas f&iacute;sicas que digitales debido a que el desconocimiento del proceso les genera desconfianza porque no saben a d&oacute;nde ir&aacute;n sus datos personales o les parece algo complicado de realizar, por lo que prefieren comprar con el proceso que ya conocen.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Lo que m&aacute;s gusta de comprar en tiendas f&iacute;sicas es la posibilidad de observar los productos a detalle y la compra en el momento de los art&iacute;culos.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Una de las principales debilidades de la compra f&iacute;sica es que el stock puede llegar a ser muy reducido, lo cual lleva a pensar al cliente que podr&iacute;an aprovechar mejor su tiempo en lugar de buscar un producto de tienda en tienda.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">El horario de tiendas f&iacute;sicas es un inconveniente para los clientes, ya que sus actividades diarias no les permiten alcanzar a ir de compras o tienen que esperar a su d&iacute;a de descanso.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">n cambio las compras en tiendas digitales brindan la oportunidad de realizar compras desde la comodidad del hogar, con un amplio stock de productos, sin depender del personal de la tienda, dando una sensaci&oacute;n de mejor inversi&oacute;n del tiempo.</p></li>
+                        <li><p class="popParr" style="font-weight: 900;">Sin embargo, las compras digitales tienen problem&aacute;ticas como la espera en el tiempo de llegada del producto, problemas con env&iacute;os o devoluciones as&iacute; como no poder visualizar el producto como se ve en vivo .</p></li>
+                      </ul>
+                    </div>
+                    <div class="col s3" content="insp3">
+                    </div>
+                  </div>
+                  <div class="row" content="idea3">
+                    <div class="col s3" content="idea3"></div>
+                    <div class="col s6" content="idea3">
+                      <img src="img/ideation dream.png" class="headPopImg" style="padding-top: 0;padding-bottom: 0;width:120%;margin-left:-10%;"id="ideation_pop3" content="idea3">
+                    </div>
+                    <div class="col s3" content="idea3"></div>
+                  </div>                   
+                  <div class="row" content="idea3">
+                    <div class="col s3" content="idea3">
+                    </div>
+                    <div class="col s6" content="idea3">
+                      <p class="popParr" content="idea3">Comenzamos esta etapa realizando un benchmark de herramientas digitales de ecommerce para conocer los procesos de compra de diferentes productos. Aprendimos acerca de diferentes aspectos a considerar para la propuesta de la tienda digital, un ejemplo de esto es la importancia de la optimizaci&oacute;n del tiempo de b&uacute;squeda de un producto, el cual se relaciona con las categor&iacute;as en las que dividen la mercanc&iacute;a de la tienda como tipo de cliente, tipo de producto, color y precio. </p>
+                      <p class="popParr" content="idea3">Conforme esta observaci&oacute;n y an&aacute;lisis nos dimos a la tarea de realizar un esquema de orden de los diferentes pasos a seguir dentro de la aplicaci&oacute;n, los cuales dividimos en tres grandes pasos: acceso, b&uacute;squeda de mercanc&iacute;a y pago y env&iacute;o, con sus respectivas peque&ntilde;as tareas para completar el proceso. </p>
+                      <p class="popParr" content="idea3">Acceso. Con la finalidad de brindar seguridad a las personas, decidimos que no sea necesario registrarse para revisar al cat&aacute;logo o para comprar. Sin embargo s&iacute; deb&iacute;a tener una opci&oacute;n de registro, cuyo beneficio ser&iacute;an alertas de promociones as&iacute; como cupones de descuento. </p>
+                      <p class="popParr" content="idea3">B&uacute;squeda de mercanc&iacute;a. Ordenamos las categor&iacute;as de lo general a lo particular, pues observamos que as&iacute; es la b&uacute;squeda de las personas. As&iacute;, qued&oacute; la jerarqu&iacute;a:</p>
+                      <elems>
+                        <ele lvl="0"><p class="popParr"><b>Nivel 1: </b>G&eacute;nero y edad aproximada</p></ele>
+                        <ele lvl="1"><p class="popParr" stye="margin-left:5%;">Mujer</p></ele>
+                        <ele lvl="1"><p class="popParr" stye="margin-left:5%;">Hombre</p></ele>
+                        <ele lvl="1"><p class="popParr" stye="margin-left:5%;">Ni&ntilde;o</p></ele>
+                        <ele lvl="1"><p class="popParr" stye="margin-left:5%;">Ni&ntilde;a</p></ele>
+                        <ele lvl="0"><p class="popParr"><b>Nivel 2: </b>Tipo de evento</p></ele>
+                        <ele lvl="1"><p class="popParr" stye="margin-left:5%;">Casual</p></ele>
+                        <ele lvl="1"><p class="popParr" stye="margin-left:5%;">Formal</p></ele>
+                        <ele lvl="1"><p class="popParr" stye="margin-left:5%;">Deportivo</p></ele>
+                        <ele lvl="0"><p class="popParr"><b>Nivel 3:</b>Tipo de calzado</p></ele>
+                        <ele lvl="1"><p class="popParr" stye="margin-left:5%;">Tenis</p></ele>
+                        <ele lvl="1"><p class="popParr" stye="margin-left:5%;">Botas</p></ele>
+                        <ele lvl="1"><p class="popParr" stye="margin-left:5%;">Etc.</p></ele>
+                      </elems>
+                      <p class="popParr" content="idea3">Sin embargo decidimos mantener los filtros visibles para que los usuarios pudieran realizar b&uacute;squedas m&aacute;s espec&iacute;ficas.</p>
+                      <img src="img/23.png" class="headPopImg" style="padding: 0;" onclick="PopUpImg('img/23.png')">
+                    </div>
+                    <div class="col s3" content="idea3">
+                    </div>
+                  </div>
+                  <div class="row" content="imp3">
+                    <div class="col s3" content="imp3"></div>
+                    <div class="col s6" content="imp3">
+                      <img src="img/implement create.png" class="headPopImg" style="padding-top: 0;padding-bottom: 0;width:120%;margin-left:-10%;" id="implement_pop3" content="imp3">
+                    </div>
+                    <div class="col s3" content="imp3"></div>
+                  </div>                  
+                  <div class="row" content="imp3">
+                    <div class="col s3" content="imp3">
+                    </div>
+                    <div class="col s6" content="imp3">
+                      <p class="popParr" content="imp3">Los bocetos en el primer ciclo de interaci&oacute;n se realizaron pensado en c&oacute;mo resolver la consulta del catalogo de productos, desde el acceso a la aplicaci&oacute;n hasta la b&uacute;squeda de un producto. Esto con la finalidad de entender los posibles problemas que los usuarios tendr&iacute;an y saber como resolverlos.</p>
+                      <img src="img/33.png" class="headPopImg" style="padding: 0;" onclick="PopUpImg('img/33.png')" content="imp3"> 
+                      <img src="img/54.png" class="headPopImg" style="padding:0;" onclick="PopUpImg('img/54.png')"  content="imp3">
+                      <p class="popParr">Posteriormente, realizamos un flujo de navegaci&oacute;n de la aplicaci&oacute;n para entender c&oacute;mo es que los usuarios navegar&aacute;n en la aplicaci&oacute;n. Este deb&iacute;a ser claro, intuitivo y deb&iacute;a brindar feedback constante para que el usuario pueda tomar decisiones de hacia donde dirigirse sin mayor complicaci&oacute;n. </p>
+                    </div>                      
+                    <div class="col s3" content="imp3">
+                    </div>
+                  </div>
+                  <div class="row" content="imp3">
+                    <div class="col s3" content="imp3"></div>
+                    <div class="col s6" content="imp3">
+                      <img src="img/backup_of_beyond the surface ecommerce.png" class="headPopImg" style="padding-top: 3%;padding-bottom: 1%;" content="imp3">
+                    </div>
+                    <div class="col s3" content="imp3" content="imp3"></div>
+                  </div>                   
+                  <div class="row" style="padding-top:3%;" content="imp3">
+                    <div class="col s3" content="imp3">
+                    </div>
+                    <div class="col s6" content="imp3">
+                      <p class="popParr">Ya en el dise&ntilde;o visual nos ocupamos de temas de contrastes adecuados de color, comunicaci&oacute;n gr&aacute;fica para marcar jerarqu&iacute;as de informaci&oacute;n, indicaci&oacute;n de botones activados y desactivados, etc. Adem&aacute;s de comunicar un "ambiente" ligado a la identidad de la empresa. </p>
+                      <img src="img/73.png" class="headPopImg" style="padding: 0;" onclick="PopUpImg('img/73.png')" content="imp3">
+                    </div>                      
+                    <div class="col s3" content="imp3">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+      <!-- MODAL5 -->
+              <div id="modal5" class="modal">
+                <div class="modal-content">
+                  <div class="row">
+                    <div class="col s3">
+                      <!--<div class="elevador">
+                        <div class="row">
+                          <div class="col s5">
+                            <img class="puntos_pop" src="img/puntitos del elevador.png">
+                          </div>
+                          <div class="col s7">                          
+                            <ul>
+                              <li class="elevador_sel" id="elev_4_1" onclick="makeScroll('overview_pop4');resaltaElevador('elev_4_1');">Overview</li>
+                              <li class="elevador_sel" id="elev_4_2" onclick="makeScroll('inspiration_pop4');resaltaElevador('elev_4_2');">Inspiration</li
+                              <li class="elevador_sel" id="elev_4_3" onclick="makeScroll('ideation_pop4');resaltaElevador('elev_4_3');">Ideation</li>
+                              <li class="elevador_sel" id="elev_4_4" onclick="makeScroll('implement_pop4');resaltaElevador('elev_4_4');">Implement</li>
+                            </ul>
+                          </div>
+                        </div>  
+                      </div>-->
+                    </div>
+                    <div class="col s6">
+                      <img src="img/home delivery.png" class="headPopImg" id="overview_pop4">
+                      <!--<img src="img/delivery ux-ilovepdf-compressed-02.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0">-->
+                      <img src="img/delivery ux-ilovepdf-compressed-03.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-03.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-04.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-04.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-05.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-05.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-07.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-07.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-08.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-08.png')">
+                      <!--<img src="img/delivery ux-ilovepdf-compressed-09.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0">-->
+                      <img src="img/delivery ux-ilovepdf-compressed-10.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-10.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-06.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-06.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-11.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-11.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-20.jpg" id="elev_4_3" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-20.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-13.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-13.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-14.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-14.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-15.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-15.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-16.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-16.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-17.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-17.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-18.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-17.png')">
+                      <!--<img src="img/delivery ux-ilovepdf-compressed-19.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0">-->
+                      <img src="img/delivery ux-ilovepdf-compressed-21.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-21.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-22.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-22.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-23.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-23.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-24.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-24.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-25.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-25.png')">
+                      <!--<img src="img/delivery ux-ilovepdf-compressed-26.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0">-->
+                      <img src="img/delivery ux-ilovepdf-compressed-32.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-32.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-27.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0"onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-27.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-28.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-28.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-29.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-29.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-30.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-30.png')">
+                      <img src="img/delivery ux-ilovepdf-compressed-31.jpg" class="headPopImg" style="padding-top:0;padding-bottom:0" onclick="PopUpImg('img/delivery ux-ilovepdf-compressed-31.png')">
+                    </div>
+                    <div class="col s3"></div>
+                  </div>                  
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+              <!--MODAL DE IMAGENES-->
+              <div id="modal6" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                  <img src="" id="sobrePopImg" style="width:100%;padding: 10px;">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                </div>
+              </div>
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+      <script>
+        var currentSlide=0;
+        var totalSlides=0;
+        var actualFade=1;
+        $(document).ready(function(){
+          setInterval(transition, 3000);
+          slider=$('.slider').bxSlider({
+              touchEnabled: false,
+              oneToOneTouch: false,
+              pager: 'true',
+              infiniteLoop:false,
+              onSlideBefore: function(){
+                // increment current by 1 each time this method is called
+                 current = slider.getCurrentSlide();
+                 $(".select_circle").css('opacity','0');
+                 $("#navBullet_"+(current)).css('opacity','1');
+                 $(".navTextCl").css('font-weight','normal');
+                 $(".navTextCl").css('margin-top','0%');
+                 $("#navText_"+(current)).css('font-weight','bolder');
+                 $("#navText_"+(current)).css('margin-top','-8%');
+                 
+                 totalSlides=slider.getSlideCount();
+                 if(current>0){
+                  $(".imgPrev").attr("src","img/izq_neg.png");
+                  $(".imgNext").attr("src","img/der_neg.png");
+                  $(".imgPrev").css('display','block');
+                  //NAVBAR
+                  $(".nav-extended").css('background-color','white');                  
+                  $("body").css('background-color','white');
+                  $("nav a").css('color','black');
+                  $("#logoImg").attr("src","img/Beyond the surface negro.png");
+                  $(".bx-pager").css('margin-left','472px');
+                  $(".bx-pager").css('top','620px');
+                 }
+                 else{
+                  $(".imgPrev").attr("src","img/izq_blanco.png");
+                  $(".imgNext").attr("src","img/der_blanco.png");
+                  $(".imgPrev").css('display','none');  
+                  //NAVBAR
+                  $(".nav-extended").css('background-color','#221f20');                  
+                  $("body").css('background-color','#221f20');
+                  $("nav a").css('color','white');   
+                  $("#logoImg").attr("src","img/Beyond the surface blanco.png");      
+                  $(".bx-pager").css('margin-left','0%');  
+                  $(".bx-pager").css('top','666px');     
+                 }
+                 if(current==totalSlides-2){
+                  $(".bx-next").css('display','none');
+                  $(".bx-prev").css('display','block');
+                  $(".bx-pager").css('display','block');
+                }
+                else if(current==totalSlides-1){
+                  $(".bx-next").css('display','none');
+                  $(".bx-prev").css('display','none');
+                  $(".bx-pager").css('display','none');
+                }
+                else{
+                  $(".bx-next").css('display','block');
+                  $(".bx-prev").css('display','block');
+                  $(".bx-pager").css('display','block');
+                }
+              },
+          });
+          $('.modal').modal();
+          $('#modal6').modal({dismissible: false});
+          $(".bx-prev").append( '<img class="imgPrev" src="img/izq_blanco.png" style="display:none; width:100%;height:auto;cursor:pointer;">' );
+          $(".bx-next").append( '<img class="imgNext" src="img/der_blanco.png" style="width:100%;height:auto;cursor:pointer;">' );
+          $( ".bx-pager-link" ).each(function( index ) {
+            if(index==5){
+              $(this).css('display','none');
+            }
+          });
+        });
+        //FUNCion para abrir modals
+        function AbrirModal(indexMod){
+          $(".modal-content").scrollTop(0);
+          if (indexMod==1){
+            $("#modal1").modal("open");
+          } 
+          else if (indexMod==2){
+            $("#modal2").modal("open");
+          }   
+          else if (indexMod==3){
+            $("#modal3").modal("open");
+          }  
+          else if (indexMod==4){
+            $("#modal4").modal("open");
+          } 
+          else if (indexMod==5){
+            $("#modal5").modal("open");
+          }
+        }
+        function VeSlide(indexSlide){
+          slider.goToSlide(indexSlide);
+        }
+        function transition() {
+          $("#imTran_"+actualFade).fadeOut(1000);
+          if(actualFade==6){
+            actualFade=1;
+          }
+          else{
+            actualFade+=1;
+          }
+          $("#imTran_"+actualFade).fadeIn(1000);
+      }
+      function makeScroll(id_Scroll){
+        $(".modal-content").scrollTop(0);
+        $('.modal-content').animate({scrollTop: $("#"+id_Scroll).offset().top}, '1000');
+      }
+      function resaltaElevador(este){
+        $(".elevador_sel").css('font-weight','400');
+        $(".elevador_sel").css('margin-left', '0px');
+        $("#"+este).css('font-weight','900');
+        $("#"+este).css('margin-left', '35px');
+      }
+      function PopUpImg(src){
+        $("#sobrePopImg").attr("src",src);
+        $("#modal6").modal("open");
+      }
+      $(document).on('mouseover', function(e) {
+          var ident=$(e.target).attr('content');
+          console.log(ident);
+          if(ident=="over"){resaltaElevador('elev_1_1');}
+          else if(ident=="insp"){resaltaElevador('elev_1_2');}
+          else if(ident=="idea"){resaltaElevador('elev_1_3');}
+          else if(ident=="imp"){resaltaElevador('elev_1_4');}
+          else if(ident=="over2"){resaltaElevador('elev_2_1');}
+          else if(ident=="insp2"){resaltaElevador('elev_2_2');}
+          else if(ident=="idea2"){resaltaElevador('elev_2_3');}
+          else if(ident=="imp2"){resaltaElevador('elev_2_4');}
+          else if(ident=="over3"){resaltaElevador('elev_3_1');}
+          else if(ident=="insp3"){resaltaElevador('elev_3_2');}
+          else if(ident=="idea3"){resaltaElevador('elev_3_3');}
+          else if(ident=="imp3"){resaltaElevador('elev_3_4');}
+      });
+      </script>
+    </body>
+  </html>
